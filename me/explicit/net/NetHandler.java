@@ -1,0 +1,99 @@
+// 
+// Decompiled by Procyon v0.5.36
+// 
+
+package me.explicit.net;
+
+import java.util.Base64;
+import java.security.Key;
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
+import java.util.Arrays;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import net.minecraft.network.play.server.S20PacketEntityProperties;
+import net.minecraft.network.play.server.S2APacketParticles;
+import net.minecraft.network.play.server.S3EPacketTeams;
+import net.minecraft.network.play.server.S44PacketWorldBorder;
+import net.minecraft.network.play.server.S3DPacketDisplayScoreboard;
+import net.minecraft.network.play.server.S3CPacketUpdateScore;
+import net.minecraft.network.play.server.S3BPacketScoreboardObjective;
+import net.minecraft.network.play.server.S3FPacketCustomPayload;
+import net.minecraft.network.play.server.S29PacketSoundEffect;
+import net.minecraft.network.play.server.S3APacketTabComplete;
+import net.minecraft.network.play.server.S39PacketPlayerAbilities;
+import javax.swing.Timer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import me.explicit.module.misc.PingSpoof;
+import net.minecraft.network.play.server.S00PacketKeepAlive;
+import net.minecraft.network.play.server.S38PacketPlayerListItem;
+import net.minecraft.network.play.server.S1EPacketRemoveEntityEffect;
+import net.minecraft.network.play.server.S1DPacketEntityEffect;
+import net.minecraft.network.play.server.S37PacketStatistics;
+import net.minecraft.network.play.server.S28PacketEffect;
+import net.minecraft.network.play.server.S34PacketMaps;
+import net.minecraft.network.play.server.S2BPacketChangeGameState;
+import net.minecraft.network.play.server.S26PacketMapChunkBulk;
+import net.minecraft.network.play.server.S25PacketBlockBreakAnim;
+import net.minecraft.network.play.server.S24PacketBlockAction;
+import net.minecraft.network.play.server.S2EPacketCloseWindow;
+import net.minecraft.network.play.server.S04PacketEntityEquipment;
+import net.minecraft.network.play.server.S31PacketWindowProperty;
+import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
+import net.minecraft.network.play.server.S33PacketUpdateSign;
+import net.minecraft.network.play.server.S36PacketSignEditorOpen;
+import net.minecraft.network.play.server.S30PacketWindowItems;
+import net.minecraft.network.play.server.S32PacketConfirmTransaction;
+import net.minecraft.network.play.server.S2FPacketSetSlot;
+import net.minecraft.network.play.server.S2DPacketOpenWindow;
+import net.minecraft.network.play.server.S27PacketExplosion;
+import net.minecraft.network.play.server.S07PacketRespawn;
+import net.minecraft.network.play.server.S1FPacketSetExperience;
+import net.minecraft.network.play.server.S06PacketUpdateHealth;
+import net.minecraft.network.play.server.S19PacketEntityStatus;
+import net.minecraft.network.play.server.S1BPacketEntityAttach;
+import net.minecraft.network.play.server.S05PacketSpawnPosition;
+import net.minecraft.network.play.server.S03PacketTimeUpdate;
+import net.minecraft.network.play.server.S0FPacketSpawnMob;
+import net.minecraft.network.play.server.S0APacketUseBed;
+import net.minecraft.network.play.server.S0BPacketAnimation;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.network.play.server.S02PacketChat;
+import net.minecraft.network.play.server.S0DPacketCollectItem;
+import net.minecraft.util.IChatComponent;
+import net.minecraft.network.play.server.S40PacketDisconnect;
+import net.minecraft.network.play.server.S23PacketBlockChange;
+import net.minecraft.network.play.server.S21PacketChunkData;
+import net.minecraft.network.play.server.S22PacketMultiBlockChange;
+import net.minecraft.network.play.server.S08PacketPlayerPosLook;
+import net.minecraft.network.play.server.S13PacketDestroyEntities;
+import net.minecraft.network.play.server.S19PacketEntityHeadLook;
+import net.minecraft.network.play.server.S14PacketEntity;
+import net.minecraft.network.play.server.S09PacketHeldItemChange;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
+import java.util.concurrent.ThreadLocalRandom;
+import me.explicit.module.Module;
+import me.explicit.utils.CombatUtils;
+import net.minecraft.entity.player.EntityPlayer;
+import me.explicit.module.combat.Reach;
+import me.explicit.Explicit;
+import net.minecraft.network.play.server.S18PacketEntityTeleport;
+import net.minecraft.network.play.server.S0CPacketSpawnPlayer;
+import net.minecraft.network.play.server.S1CPacketEntityMetadata;
+import net.minecraft.network.play.server.S12PacketEntityVelocity;
+import net.minecraft.network.play.server.S10PacketSpawnPainting;
+import net.minecraft.network.play.server.S2CPacketSpawnGlobalEntity;
+import net.minecraft.network.play.server.S11PacketSpawnExperienceOrb;
+import net.minecraft.network.play.server.S0EPacketSpawnObject;
+import net.minecraft.network.play.server.S01PacketJoinGame;
+import java.lang.reflect.Field;
+import net.minecraft.client.gui.GuiScreen;
+import me.explicit.utils.Game;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.network.NetHandlerPlayClient;
+
+public class NetHandler extends NetHandlerPlayClient
+{
+}
